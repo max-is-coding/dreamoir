@@ -4,6 +4,8 @@ const cors = require('cors')
 
 const entries = require('./routes/entries')
 const dreams = require('./routes/dreams')
+const study = require('./routes/study')
+const practice = require('./routes/practice')
 
 const server = express()
 
@@ -12,6 +14,8 @@ server.use(express.static(path.join(__dirname, './public')))
 server.use(cors('*'))
 server.use('/entries', entries)
 server.use('/dreams', dreams)
+server.use('/study', study)
+server.use('/practice', practice)
 server.use('/*', (req, res) => res.sendStatus(404))
 
 server.get('*', (req, res) => {

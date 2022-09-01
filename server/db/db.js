@@ -6,6 +6,10 @@ function getEntries(db = connection) {
   return db('entries').select()
 }
 
+function getCards(db = connection) {
+  return db('cards').select()
+}
+
 function addEntry(entry, db = connection) {
   return db('entries').insert(entry)
 }
@@ -23,4 +27,5 @@ module.exports = {
   addEntry,
   getEntry,
   getMeanings,
+  getCards,
 }

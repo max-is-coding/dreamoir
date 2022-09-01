@@ -582,62 +582,62 @@ exports.seed = (knex) => {
           To see or feel the air conditioner in your dream represents purification and relief. You have cooled off from some heated argument.`,
         },
         {
-          id: 93,
+          id: 94,
           keyword: `air duct`,
           meaning: `To see an air duct in your dream represents an outlet to express your feelings. There is something that you want to get off your chest. If your dream involves seeing a lot of ducts, then it  means that you are in control of your emotions. You channel your emotions and are cautious in how you express them.`,
         },
         {
-          id: 94,
+          id: 95,
           keyword: `air gun`,
           meaning: `To see or use an air gun in your dream symbolizes an unperceived threat. You are letting your guard down in some situation where you need to be vigilant.`,
         },
         {
-          id: 95,
+          id: 96,
           keyword: `air freshener`,
           meaning: `To smell air freshener in your dream suggests that you are enjoying life's little pleasure. The dream may bring about the past or certain memories. If the air freshener is too overpowering, then it indicates that your mind is not clear. You are exhibiting a lack of judgment.`,
         },
         {
-          id: 96,
+          id: 97,
           keyword: `air force`,
           meaning: `To dream that you are in the air force suggests that you need to be more spiritually disciplined.`,
         },
         {
-          id: 97,
+          id: 98,
           keyword: `air hockey`,
           meaning: `To see or play air hockey in your dream refers to something that you need to act quickly on or someone else will.`,
         },
         {
-          id: 98,
+          id: 99,
           keyword: `air horn`,
           meaning: `To hear or sound an air horn in your dream suggests that you are not taking a matter seriously enough. It is time to focus. Alternatively, an air horn is way for your subconscious to get you to pay attention to an important aspect of the dream.`,
         },
         {
-          id: 99,
+          id: 100,
           keyword: `air raid`,
           meaning: `To dream that you are caught in an air raid indicates that you are feeling overwhelmed by things that are seemingly coming out of the blue. You feel a lack of control in your life.`,
         },
         {
-          id: 100,
+          id: 101,
           keyword: `air show`,
           meaning: `To dream that you are in an air show implies that you are showing off your accomplishments to others. You have achieved your goals and want everyone to know it.`,
         },
         {
-          id: 101,
+          id: 102,
           keyword: `airbag`,
           meaning: `To see the airbag in a vehicle deploy in your dream forewarns that you will run into a major setback if you keep the pace of your current life path. You need to slow down and take your time. Alternatively, the air bag is symbolic of your support system in your time of need.`,
         },
         {
-          id: 102,
+          id: 103,
           keyword: `aircraft carrier`,
           meaning: `To see an aircraft carrier in your dream suggests that you are preparing to confront your emotions. You are addressing feelings that you have been ignoring or suppressing for too long.`,
         },
         {
-          id: 103,
+          id: 104,
           keyword: `airdancer`,
           meaning: `To see an airdancer in your dream represents someone who wants your full attention. Alternatively, dreaming of an airdancer indicates that you are too yielding in a situation. Stand up for yourself.`,
         },
         {
-          id: 104,
+          id: 105,
           keyword: `airplane`,
           meaning: `To see or dream that you are on an airplane indicates that you will overcome your obstacles and rise to a new level of prominence and status. You may experience a higher consciousness, new-found freedom and greater awareness. Perhaps you need to gain a better perspective or wider view on something. If the airplane is taking off, then it suggests that an idea or plan is about to "take off" and be put into action. It may also represent your need to get away and escape from your daily life. Dreaming that the airplane sits on the runway and never takes off refers to a real life project or idea that has failed to get off the ground. You are having difficulties getting started on a project.
 
@@ -656,19 +656,19 @@ exports.seed = (knex) => {
           To see an airplane landing in your dream signifies completion of a journey or some task. Some issues that were previously out of control have been resolved.`,
         },
         {
-          id: 105,
+          id: 106,
           keyword: `airport`,
           meaning: `To see an airport in your dream symbolizes birth (arrivals) and death (departures). If the airport is busy, then it signifies the desire for freedom, high ideals, ambition, and hopes. It is an indication that you are approaching a new departure in your life. Some new idea is taking off or is ready to take off. You may be experiencing a new relationship, new career path or new adventure. 
 
           To dream of a deserted airport indicates that your plans or goals will be changed or delayed. You are having to put some aspect of your life on hold.`,
         },
         {
-          id: 106,
+          id: 107,
           keyword: `aisle`,
           meaning: `To dream that you are walking down or through an aisle represents your ability to move forward in life with confidence. There is balance in your life. Alternatively, the dream indicates dissension and disagreements. You are stuck in the middle between two diverging viewpoints.`,
         },
         {
-          id: 107,
+          id: 108,
           keyword: `alabaster`,
           meaning: `To see alabaster in your dream represents success in your love life. You have healthy personal relationships.
 

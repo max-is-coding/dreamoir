@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Home() {
+function Study() {
   return (
     <div className="typing">
       <h1>welcome back to your tarot studies.</h1>
@@ -74,4 +74,4 @@ function Home() {
   )
 }
 
-export default Home
+export default Study
