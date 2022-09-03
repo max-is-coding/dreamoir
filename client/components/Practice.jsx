@@ -1,75 +1,115 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { getCards } from '../apiClient'
+import ReactCardFlipper from 'react-card-flipper'
+import { fadeIn } from 'react-animations'
+
+let studyArray = []
+let idArray = []
+let displayArray = []
+let clickable = true
 
 function Practice() {
+  const [tarotCards, setCards] = useState([])
+  const [studyCard, setCard] = useState([])
+
+  function newCard() {
+    getCards()
+      .then((cards) => {
+        let chosenID = Math.floor(Math.random() * 72)
+        idArray.push(chosenID)
+        setCard(cards[chosenID])
+        getRndm()
+        function getRndm() {
+          let randID = Math.floor(Math.random() * 72)
+          if (!idArray.includes(randID)) {
+            studyArray.push(cards[randID])
+            idArray.push(randID)
+          }
+          if (idArray.length < 6) {
+            getRndm()
+          }
+        }
+
+        let arrayIndex = Math.floor(Math.random() * 6)
+        studyArray.splice(arrayIndex, 0, cards[chosenID])
+
+        studyArray.forEach((selection) => {
+          displayArray.push(
+            <div
+              key={selection.id}
+              onClick={() => checkCard(selection.id, cards[chosenID].id)}
+            >
+              <ReactCardFlipper height="250px" width="167px" levitate>
+                <div className="front study" id={selection.id}>
+                  <p className="uprev">Upright:</p>
+                  <p>{selection.upright}</p>
+                  <p className="uprev">Reversed:</p>
+                  <p>{selection.reversed}</p>
+                </div>
+                <div className="back study">
+                  <img
+                    className="card-img"
+                    src={selection.image}
+                    alt={selection.name}
+                  />
+                </div>
+              </ReactCardFlipper>
+            </div>
+          )
+        })
+        setCards(displayArray)
+      })
+      .catch((err) => {
+        console.error(err.message)
+      })
+  }
+
+  useEffect(() => {
+    newCard()
+  }, [])
+
+  function checkCard(clicked, answer) {
+    let clickedCard = document.getElementById(clicked)
+    clickedCard.style.pointerEvents = 'none'
+    if (clicked == answer) {
+      $(clickedCard).fadeOut('slow')
+      setTimeout(() => {
+        emptyArrays()
+        newCard()
+      }, 1700)
+    } else {
+      if (clickable) {
+        setTimeout(() => {
+          document.getElementById(clicked).style.pointerEvents = 'auto'
+          document.getElementById(clicked).click()
+        }, 1000)
+        clickable = false
+        setTimeout(() => {
+          clickable = true
+        }, 1050)
+      }
+    }
+  }
+
+  function emptyArrays() {
+    idArray = []
+    displayArray = []
+    studyArray = []
+  }
+
   return (
     <div className="typing">
-      <h1>welcome back to your tarot studies.</h1>
-      <h2>what would you like to do today?</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rhoncus
-        dignissim feugiat. Suspendisse vestibulum lacinia hendrerit. Integer
-        vestibulum arcu vitae dolor vestibulum, vitae consequat ante euismod.
-        Vestibulum venenatis, nibh a tincidunt gravida, ante elit tincidunt
-        ipsum, sed laoreet massa mi vitae massa. Proin efficitur nisi nulla, id
-        dictum lorem accumsan sit amet. Nunc lorem quam, condimentum lacinia
-        porta eu, sollicitudin vitae neque. Praesent volutpat diam a arcu
-        hendrerit tincidunt. Fusce sed turpis at tellus faucibus laoreet eget ac
-        justo. Proin non eros luctus, viverra ligula et, facilisis lectus.
-        Maecenas eleifend suscipit ante at venenatis. Nam iaculis feugiat
-        ligula, eu rutrum dolor vulputate auctor. Nunc a turpis vestibulum diam
-        tristique maximus sit amet ut ipsum.
-      </p>
-      <br />
-
-      <p>
-        Nulla viverra ex leo, et venenatis elit semper vel. Nulla nisl libero,
-        semper commodo aliquam a, pulvinar et diam. Cras luctus eros nec velit
-        iaculis, vulputate bibendum orci fermentum. Etiam malesuada aliquet dui.
-        Suspendisse potenti. Sed varius ipsum lorem. Vestibulum eu interdum
-        magna. Vestibulum mi justo, iaculis vel aliquet sagittis, posuere et
-        sapien. Integer ultricies purus mauris, facilisis convallis ex laoreet
-        a. Vivamus vulputate nisi euismod orci commodo pulvinar. Donec molestie
-        ex rhoncus finibus vehicula. Duis luctus feugiat volutpat. Nullam
-        accumsan urna sollicitudin orci posuere accumsan.
-      </p>
-
-      <p>
-        Nulla mattis facilisis lacus. Ut vel aliquam metus. Ut sodales finibus
-        malesuada. Phasellus laoreet erat tortor, sed tristique nibh
-        pellentesque eget. Mauris ultricies tellus sed pretium posuere. Nullam
-        ullamcorper metus in quam fringilla mattis. Suspendisse molestie eros
-        nulla, id ultrices arcu viverra sed. Quisque ut arcu molestie arcu
-        vulputate rutrum.
-      </p>
-      <br />
-
-      <p>
-        Morbi varius dui ac rutrum ullamcorper. Nulla eget purus convallis,
-        faucibus dolor nec, bibendum felis. Proin auctor mattis urna sed
-        maximus. Donec urna ipsum, molestie non cursus at, pellentesque eu
-        tellus. Nam fermentum risus venenatis ante porta vehicula. Integer at ex
-        ut nisl pellentesque facilisis ac quis libero. Duis blandit ex massa,
-        feugiat volutpat turpis varius finibus. Quisque eleifend ultrices augue
-        et gravida. Duis vitae posuere quam. Vivamus felis leo, dignissim ac sem
-        eget, posuere aliquet felis. Curabitur interdum sagittis elit et
-        feugiat. Curabitur vestibulum ullamcorper nunc nec hendrerit.
-        Pellentesque quis dignissim justo.
-      </p>
-      <br />
-
-      <p>
-        Integer ultrices quis diam in elementum. Integer sodales scelerisque
-        velit, eu lobortis nisi faucibus at. Nulla dapibus, quam in ornare
-        blandit, diam sem molestie tellus, vitae tincidunt justo mi et eros.
-        Aliquam dictum pulvinar leo. Suspendisse a erat tortor. Duis urna nisi,
-        tempor quis consequat sit amet, fermentum a dui. Ut urna dolor, feugiat
-        et tortor ut, fermentum tempor dolor. Maecenas in vulputate mi. Duis
-        tristique enim libero. Aliquam eu dui venenatis, viverra purus sit amet,
-        scelerisque tellus. Etiam sit amet condimentum eros. Cras interdum eu
-        orci quis suscipit. Integer a tortor aliquet, bibendum urna non,
-        malesuada erat.
-      </p>
-      <br></br>
+      <h1>tarot quiz</h1>
+      <div className="studyGame">
+        <div className="studyCard">
+          <img
+            className="studyCardImg"
+            src={studyCard.image}
+            alt={studyCard.name}
+          />
+        </div>
+        <div className="select">{tarotCards}</div>
+      </div>
     </div>
   )
 }

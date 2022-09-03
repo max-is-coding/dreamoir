@@ -42,6 +42,10 @@
     "jquery": "^3.6.1",
     "knex": "^2.1.0",
     "lodash": "^4.17.20",
+    "react-animations": "^1.0.0",
+    "react-card-flip": "^1.1.5",
+    "react-card-flipper": "^1.0.1",
+    "react-confetti": "^6.1.0",
     "react-expanding-textarea": "^2.3.6",
     "react-router-dom": "^6.3.0",
     "sqlite3": "^5.0.8"
@@ -71,7 +75,7 @@
     "prettier": "2.6.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "superagent": "7.1.1",
+    "superagent": "^7.1.1",
     "webpack": "^5.69.1",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.8.1"

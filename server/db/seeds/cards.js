@@ -8,7 +8,7 @@ exports.seed = (knex) => {
         {
           id: 100,
           name: 'The Fool',
-          suit: 'none',
+          suit: 'major arcana',
           value: '0',
           image: '/images/tarot-fool.jpg',
           type: 'Major',
@@ -18,7 +18,7 @@ exports.seed = (knex) => {
         {
           id: 101,
           name: 'The Magician',
-          suit: 'none',
+          suit: 'major arcana',
           value: '1',
           image: '/images/tarot-magician.jpg',
           type: 'Major',
@@ -28,7 +28,7 @@ exports.seed = (knex) => {
         {
           id: 102,
           name: 'The High Priestess',
-          suit: 'none',
+          suit: 'major arcana',
           value: '2',
           image: '/images/tarot-highpriestess.jpg',
           type: 'Major',
@@ -38,7 +38,7 @@ exports.seed = (knex) => {
         {
           id: 103,
           name: 'The Empress',
-          suit: 'none',
+          suit: 'major arcana',
           value: '3',
           image: '/images/tarot-empress.jpg',
           type: 'Major',
@@ -48,7 +48,7 @@ exports.seed = (knex) => {
         {
           id: 104,
           name: 'The Emperor',
-          suit: 'none',
+          suit: 'major arcana',
           value: '4',
           image: '/images/tarot-emperor.jpg',
           type: 'Major',
@@ -58,7 +58,7 @@ exports.seed = (knex) => {
         {
           id: 105,
           name: 'The Hierophant',
-          suit: 'none',
+          suit: 'major arcana',
           value: '5',
           image: '/images/tarot-hierophant.jpg',
           type: 'Major',
@@ -68,7 +68,7 @@ exports.seed = (knex) => {
         {
           id: 106,
           name: 'The Lovers',
-          suit: 'none',
+          suit: 'major arcana',
           value: '6',
           image: '/images/tarot-lovers.jpg',
           type: 'Major',
@@ -78,7 +78,7 @@ exports.seed = (knex) => {
         {
           id: 107,
           name: 'The Chariot',
-          suit: 'none',
+          suit: 'major arcana',
           value: '7',
           image: '/images/tarot-chariot.jpg',
           type: 'Major',
@@ -88,7 +88,7 @@ exports.seed = (knex) => {
         {
           id: 108,
           name: 'Strength',
-          suit: 'none',
+          suit: 'major arcana',
           value: '8',
           image: '/images/tarot-strength.jpg',
           type: 'Major',
@@ -98,7 +98,7 @@ exports.seed = (knex) => {
         {
           id: 109,
           name: 'The Hermit',
-          suit: 'none',
+          suit: 'major arcana',
           value: '9',
           image: '/images/tarot-hermit.jpg',
           type: 'Major',
@@ -108,7 +108,7 @@ exports.seed = (knex) => {
         {
           id: 110,
           name: 'The Wheel of Fortune',
-          suit: 'none',
+          suit: 'major arcana',
           value: '10',
           image: '/images/tarot-wheeloffortune.jpg',
           type: 'Major',
@@ -118,7 +118,7 @@ exports.seed = (knex) => {
         {
           id: 111,
           name: 'Justice',
-          suit: 'none',
+          suit: 'major arcana',
           value: '11',
           image: '/images/tarot-justice.jpg',
           type: 'Major',
@@ -128,7 +128,7 @@ exports.seed = (knex) => {
         {
           id: 112,
           name: 'The Hanged Man',
-          suit: 'none',
+          suit: 'major arcana',
           value: '12',
           image: '/images/tarot-hangedman.jpg',
           type: 'Major',
@@ -138,7 +138,7 @@ exports.seed = (knex) => {
         {
           id: 113,
           name: 'Death',
-          suit: 'none',
+          suit: 'major arcana',
           value: '13',
           image: '/images/tarot-death.jpg',
           type: 'Major',
@@ -148,7 +148,7 @@ exports.seed = (knex) => {
         {
           id: 114,
           name: 'Temperance',
-          suit: 'none',
+          suit: 'major arcana',
           value: '14',
           image: '/images/tarot-temperance.jpg',
           type: 'Major',
@@ -158,7 +158,7 @@ exports.seed = (knex) => {
         {
           id: 115,
           name: 'The Devil',
-          suit: 'none',
+          suit: 'major arcana',
           value: '15',
           image: '/images/tarot-devil.jpg',
           type: 'Major',
@@ -168,7 +168,7 @@ exports.seed = (knex) => {
         {
           id: 116,
           name: 'The Tower',
-          suit: 'none',
+          suit: 'major arcana',
           value: '16',
           image: '/images/tarot-tower.jpg',
           type: 'Major',
@@ -178,7 +178,7 @@ exports.seed = (knex) => {
         {
           id: 117,
           name: 'The Star',
-          suit: 'none',
+          suit: 'major arcana',
           value: '17',
           image: '/images/tarot-star.jpg',
           type: 'Major',
@@ -188,7 +188,7 @@ exports.seed = (knex) => {
         {
           id: 118,
           name: 'The Moon',
-          suit: 'none',
+          suit: 'major arcana',
           value: '18',
           image: '/images/tarot-moon.jpg',
           type: 'Major',
@@ -198,7 +198,7 @@ exports.seed = (knex) => {
         {
           id: 119,
           name: 'The Sun',
-          suit: 'none',
+          suit: 'major arcana',
           value: '19',
           image: '/images/tarot-sun.jpg',
           type: 'Major',
@@ -208,7 +208,7 @@ exports.seed = (knex) => {
         {
           id: 120,
           name: 'Judgement',
-          suit: 'none',
+          suit: 'major arcana',
           value: '20',
           image: '/images/tarot-judgement.jpg',
           type: 'Major',
@@ -218,7 +218,7 @@ exports.seed = (knex) => {
         {
           id: 121,
           name: 'The World',
-          suit: 'none',
+          suit: 'major arcana',
           value: '21',
           image: '/images/tarot-world.jpg',
           type: 'Major',

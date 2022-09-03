@@ -3,7 +3,7 @@ import React from 'react'
 function Home() {
   return (
     <div className="typing">
-      <h1>welcome back to your tarot studies.</h1>
+      <h1>welcome back.</h1>
       <h2>what would you like to do today?</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rhoncus

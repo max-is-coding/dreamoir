@@ -76,6 +76,15 @@ h2 {
   margin-bottom: 15px;
 }
 
+h3 {
+  font-size: 30px;
+  color: #562349;
+  font-family: 'Josefin Sans', sans-serif;
+  margin-left: 0px;
+  margin-top: -10px;
+  margin-bottom: 15px;
+}
+
 p {
   font-family: 'Josefin Sans', sans-serif;
   font-size: larger;
@@ -219,4 +228,111 @@ textarea {
   border:none;
   outline: none;
   height: 300px;
+}
+
+.card-div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+.card-img {
+  height: 300px;
+  width: auto;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+}
+
+.indvCards {
+  text-align: center;
+  width: 200px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.indvCards p {
+  margin-top: 10px;
+}
+
+.cardLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.back p{
+  margin-top: -10px;
+  font-size: 24px;
+  padding: 10px;
+  color: white;
+}
+
+.front p{
+  margin-top: -10px;
+  font-size: 18px;
+  padding: 10px;
+  color: white;
+}
+
+
+.back{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid lightgrey;
+  height: 100%;
+  justify-content: center;
+  background: #562349;
+  border-radius: 10px;
+}
+
+.front {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid lightgrey;
+  height: 100%;
+  justify-content: center;
+  text-align: center;
+  background: #562349;
+  border-radius: 10px;
+}
+
+.uprev {
+  font-weight: 400;
+  margin-bottom: -8px;
+}
+
+.select {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 600px;
+  width: 540px;
+  justify-content: space-evenly;
+}
+
+.studyGame {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.studyCardImg {
+  height: 600px;
+  width: auto;
 }
