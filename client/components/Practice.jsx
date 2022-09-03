@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { getCards } from '../apiClient'
 import ReactCardFlipper from 'react-card-flipper'
-import { fadeIn } from 'react-animations'
+import { pulse } from 'react-animations'
 
 let studyArray = []
 let idArray = []
