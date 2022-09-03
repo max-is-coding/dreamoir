@@ -42,6 +42,7 @@
     "jquery": "^3.6.1",
     "knex": "^2.1.0",
     "lodash": "^4.17.20",
+    "pg": "^8.8.0",
     "react-animations": "^1.0.0",
     "react-card-flip": "^1.1.5",
     "react-card-flipper": "^1.0.1",
