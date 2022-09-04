@@ -74,10 +74,10 @@ function Practice() {
     if (clicked == answer) {
       setTimeout(() => {
         setVisibility('fadeOut')
+        emptyArrays()
+        newCard()
         setTimeout(() => {
           setVisibility('fadeIn')
-          emptyArrays()
-          newCard()
         }, 500)
       }, 1700)
     } else {
