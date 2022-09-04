@@ -6,8 +6,8 @@ exports.up = (knex) => {
     table.string('value')
     table.string('image')
     table.string('type')
-    table.string('upright')
-    table.string('reversed')
+    table.text('upright')
+    table.text('reversed')
   })
 }
 
