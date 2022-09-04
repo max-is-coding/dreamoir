@@ -17,14 +17,14 @@ function Study() {
             cardArray.push(
               <div key={card.id} className="indvCards">
                 <ReactCardFlipper height="300px" width="200px" levitate>
-                  <div className="front">
+                  <div className="front clickable">
                     <img
                       className="card-img"
                       src={card.image}
                       alt={card.name}
                     />
                   </div>
-                  <div className="back">
+                  <div className="back clickable">
                     <p className="uprev">Upright:</p>
                     <p>{card.upright}</p>
                     <p className="uprev">Reversed:</p>

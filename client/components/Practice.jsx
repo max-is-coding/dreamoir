@@ -40,13 +40,13 @@ function Practice() {
               onClick={() => checkCard(selection.id, cards[chosenID].id)}
             >
               <ReactCardFlipper height="250px" width="167px" levitate>
-                <div className="front study" id={selection.id}>
+                <div className="front study clickable" id={selection.id}>
                   <p className="uprev">Upright:</p>
                   <p>{selection.upright}</p>
                   <p className="uprev">Reversed:</p>
                   <p>{selection.reversed}</p>
                 </div>
-                <div className="back study">
+                <div className="back study clickable">
                   <img
                     className="card-img"
                     src={selection.image}
