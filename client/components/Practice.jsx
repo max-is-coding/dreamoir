@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { getCards } from '../apiClient'
 import ReactCardFlipper from 'react-card-flipper'
-import { pulse } from 'react-animations'
 
 let studyArray = []
 let idArray = []
@@ -11,6 +10,7 @@ let clickable = true
 function Practice() {
   const [tarotCards, setCards] = useState([])
   const [studyCard, setCard] = useState([])
+  const [isVis, setVisibility] = useState('')
 
   function newCard() {
     getCards()
@@ -72,10 +72,13 @@ function Practice() {
     let clickedCard = document.getElementById(clicked)
     clickedCard.style.pointerEvents = 'none'
     if (clicked == answer) {
-      $(clickedCard).fadeOut('slow')
       setTimeout(() => {
-        emptyArrays()
-        newCard()
+        setVisibility('fadeOut')
+        setTimeout(() => {
+          setVisibility('fadeIn')
+          emptyArrays()
+          newCard()
+        }, 500)
       }, 1700)
     } else {
       if (clickable) {
@@ -98,17 +101,19 @@ function Practice() {
   }
 
   return (
-    <div className="typing">
-      <h1>tarot quiz</h1>
-      <div className="studyGame">
-        <div className="studyCard">
-          <img
-            className="studyCardImg"
-            src={studyCard.image}
-            alt={studyCard.name}
-          />
+    <div className={isVis}>
+      <div className="typing">
+        <h1>tarot quiz</h1>
+        <div className="studyGame">
+          <div className="studyCard">
+            <img
+              className="studyCardImg"
+              src={studyCard.image}
+              alt={studyCard.name}
+            />
+          </div>
+          <div className="select">{tarotCards}</div>
         </div>
-        <div className="select">{tarotCards}</div>
       </div>
     </div>
   )
