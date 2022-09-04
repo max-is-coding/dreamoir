@@ -25,6 +25,7 @@ function Writing() {
   }
 
   function analysis(dreamDiary) {
+    setTagVisibility('flex fadeOut')
     let dreamWordArray = dreamDiary
       .toLowerCase()
       .replace(/[\p{P}$+<=>^`|~]/gu, '')
