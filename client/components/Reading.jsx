@@ -75,35 +75,6 @@ function Reading() {
       setVisibility('fadeIn')
     }, 300)
   }
-  // useEffect(() => {
-  //   newReading()
-  // }, [])
-
-  // function checkCard(clicked, answer) {
-  //   let clickedCard = document.getElementById(clicked)
-  //   clickedCard.style.pointerEvents = 'none'
-  //   if (clicked == answer) {
-  //     setTimeout(() => {
-  //       setVisibility('fadeOut')
-  //       emptyArrays()
-  //       newCard()
-  //       setTimeout(() => {
-  //         setVisibility('fadeIn')
-  //       }, 500)
-  //     }, 1700)
-  //   } else {
-  //     if (clickable) {
-  //       setTimeout(() => {
-  //         document.getElementById(clicked).style.pointerEvents = 'auto'
-  //         document.getElementById(clicked).click()
-  //       }, 1000)
-  //       clickable = false
-  //       setTimeout(() => {
-  //         clickable = true
-  //       }, 1050)
-  //     }
-  //   }
-  // }
 
   function getReading() {
     setVisibility('fadeOut')
@@ -111,11 +82,11 @@ function Reading() {
     setBtnVis('btnDiv fadeOutBtn')
   }
 
-  function emptyArrays() {
-    idArray = []
-    displayArray = []
-    readingArray = []
-  }
+  // function emptyArrays() {
+  //   idArray = []
+  //   displayArray = []
+  //   readingArray = []
+  // }
 
   return (
     <div className="typing">

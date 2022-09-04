@@ -101,9 +101,9 @@ function Practice() {
   }
 
   return (
-    <div className={isVis}>
-      <div className="typing">
-        <h1>tarot quiz</h1>
+    <div className="typing">
+      <h1>tarot quiz</h1>
+      <div className={isVis}>
         <div className="studyGame">
           <div className="studyCard">
             <img
