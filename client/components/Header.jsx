@@ -34,6 +34,9 @@ function Header() {
               <a className="header-link" href="/practice">
                 quiz
               </a>
+              <a className="header-link" href="/reading">
+                daily reading
+              </a>
               <div className="search-bar">
                 <form id="form">
                   <input

@@ -317,6 +317,10 @@ button, input[type="submit"], input[type="reset"] {
   margin-bottom: -8px;
 }
 
+.uprevReading {
+  font-weight: 300;
+}
+
 .select {
   display: flex;
   flex-direction: column;
@@ -413,4 +417,36 @@ button, input[type="submit"], input[type="reset"] {
 
 .deciphered {
   height: 200px;
+}
+
+.readingCards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.reversed {
+  transform: rotate(180deg);
+}
+
+.reading {
+  margin-top: 30px;
+}
+
+.reading-img {
+  height: 450px;
+  width: auto;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.todaysCards {
+  display: flex;
+  flex-direction: column;
+  width: 267px;
+}
+
+.meanings {
+  text-align: center;
 }
