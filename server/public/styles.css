@@ -343,6 +343,7 @@ button, input[type="submit"], input[type="reset"] {
   align-items: center;
   gap: 5px;
   margin-bottom: 30px;
+  min-height: 50px;
 }
 
 .tagId p {
@@ -370,6 +371,7 @@ button, input[type="submit"], input[type="reset"] {
   border: 1px solid lightgrey;
   border-radius: 10px;
   background-color: whitesmoke;
+  box-shadow: 0 7px rgb(175, 174, 174);
 }
 
 .dreamButton p {
@@ -377,10 +379,16 @@ button, input[type="submit"], input[type="reset"] {
   margin: 7px;
 }
 
+.dreamButton:active {
+
+  box-shadow: 0 4px rgb(175, 174, 174);
+  transform: translateY(3px);
+}
+
 .btnDiv {
   display: flex;
   justify-content: center;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 .flex {
@@ -401,4 +409,8 @@ button, input[type="submit"], input[type="reset"] {
   opacity:1;
   transition: width 0.5s, height 0.5s, opacity 0.5s 0.5s;
 
+}
+
+.deciphered {
+  height: 200px;
 }

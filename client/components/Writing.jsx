@@ -8,11 +8,15 @@ function Writing() {
   const [analysedText, setAnalysis] = useState('')
   const [tags, setTags] = useState('')
   const [tag, setTagTag] = useState('')
+  const [isVis, setVisibility] = useState('')
+  const [tagVis, setTagVisibility] = useState('flex')
+
   const date = new Date()
   const year = date.getFullYear()
   const month = date.getMonth() + 1
   const day = date.getDate()
   let today = year + '/' + month + '/' + day
+
   function autoGrow() {
     let text = document.getElementById('entry')
     text.style.height = '296px'
@@ -56,34 +60,46 @@ function Writing() {
             )
           }
         })
-        setTags(tagArray)
-        setTagTag(
-          <div className="tagId">
-            <p>Tags: </p>
-          </div>
-        )
+        loadTags(tagArray)
       })
       .catch((err) => {
         console.error(err.message)
       })
   }
+  function loadTags(arr) {
+    setTagVisibility('flex fadeOut')
+
+    setTimeout(() => {
+      setTags(arr)
+      setTagTag(
+        <div className="tagId">
+          <p>Tags: </p>
+        </div>
+      )
+      setTagVisibility('flex fadeIn')
+    }, 500)
+  }
 
   function clickTag(word) {
-    getDreams()
-      .then((dreams) => {
-        dreams.forEach((dream) => {
-          if (dream.keyword == word) {
-            setAnalysis(
-              <div key={dream.id}>
-                <p>{dream.meaning}</p>
-              </div>
-            )
-          }
+    setVisibility('fadeOut')
+    setTimeout(() => {
+      getDreams()
+        .then((dreams) => {
+          dreams.forEach((dream) => {
+            if (dream.keyword == word) {
+              setVisibility('fadeIn')
+              setAnalysis(
+                <div key={dream.id}>
+                  <p>{dream.meaning}</p>
+                </div>
+              )
+            }
+          })
         })
-      })
-      .catch((err) => {
-        console.error(err.message)
-      })
+        .catch((err) => {
+          console.error(err.message)
+        })
+    }, 200)
   }
 
   return (
@@ -106,11 +122,13 @@ function Writing() {
           <p>decipher</p>
         </button>
       </div>
-      <div className="flex">
+      <div className={tagVis}>
         {tag}
         <div className="tags">{tags}</div>
       </div>
-      <div>{analysedText}</div>
+      <div className="deciphered">
+        <div className={isVis}>{analysedText}</div>
+      </div>
     </div>
   )
 }
