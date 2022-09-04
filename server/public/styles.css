@@ -387,3 +387,7 @@ button, input[type="submit"], input[type="reset"] {
   display: flex;
   align-items: baseline;
 }
+
+.clickable {
+  cursor: pointer;
+}
