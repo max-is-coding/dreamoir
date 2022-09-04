@@ -410,3 +410,7 @@ button, input[type="submit"], input[type="reset"] {
   transition: width 0.5s, height 0.5s, opacity 0.5s 0.5s;
 
 }
+
+.deciphered {
+  height: 200px;
+}
