@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import request from 'superagent'
 // eslint-disable-next-line no-unused-vars
-const cardsUrl = '/api/v1/cards'
+const cardsUrl = 'https://dream-meanings.herokuapp.com/cards'
 const dreamUrl = 'https://dream-meanings.herokuapp.com/interpretations'
 
 export function getCards() {
