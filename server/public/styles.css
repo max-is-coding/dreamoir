@@ -463,3 +463,18 @@ button, input[type="submit"], input[type="reset"] {
 .readDiv {
   height: 510px;
 }
+
+.kanji {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.kanjiLink {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 300px;
+}
