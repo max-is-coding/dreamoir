@@ -1,6 +1,13 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { getDreams } from '../apiClient'
+
+const keyword_extractor = require('keyword-extractor')
 
 function Writing() {
+  const [text, setText] = useState('')
+  const [analysedText, setAnalysis] = useState('')
+  const [tags, setTags] = useState('')
+  const [tag, setTagTag] = useState('')
   const date = new Date()
   const year = date.getFullYear()
   const month = date.getMonth() + 1
@@ -11,20 +18,99 @@ function Writing() {
     text.style.height = '296px'
     text.style.height = text.scrollHeight + 'px'
   }
+
+  function analysis(dreamDiary) {
+    let dreamWordArray = dreamDiary
+      .toLowerCase()
+      .replace(/[\p{P}$+<=>^`|~]/gu, '')
+
+    let tagArray = []
+
+    const extraction_result = keyword_extractor.extract(dreamWordArray, {
+      language: 'english',
+      remove_digits: true,
+      return_changed_case: true,
+      remove_duplicates: false,
+    })
+
+    getDreams()
+      .then((dreams) => {
+        dreams.forEach((dream) => {
+          let keywords = dream.keyword.toLowerCase()
+          let keywordArray = keywords.split(' ')
+          if (
+            extraction_result.includes(keywords) ||
+            (extraction_result.includes(keywordArray[0]) &&
+              extraction_result.includes(keywordArray[1])) ||
+            (extraction_result.includes('actor') &&
+              keywordArray.includes('actor')) ||
+            (extraction_result.includes('actress') &&
+              keywordArray.includes('actress'))
+          ) {
+            tagArray.push(
+              <div className="tag" key={dream.id}>
+                <button onClick={() => clickTag(dream.keyword)}>
+                  <p>{dream.keyword}</p>
+                </button>
+              </div>
+            )
+          }
+        })
+        setTags(tagArray)
+        setTagTag(
+          <div className="tagId">
+            <p>Tags: </p>
+          </div>
+        )
+      })
+      .catch((err) => {
+        console.error(err.message)
+      })
+  }
+
+  function clickTag(word) {
+    getDreams()
+      .then((dreams) => {
+        dreams.forEach((dream) => {
+          if (dream.keyword == word) {
+            setAnalysis(
+              <div key={dream.id}>
+                <p>{dream.meaning}</p>
+              </div>
+            )
+          }
+        })
+      })
+      .catch((err) => {
+        console.error(err.message)
+      })
+  }
+
   return (
     <div className="typing">
       <div className="writing-header">
         <h2>title</h2>
         <h2>date: {today}</h2>
       </div>
-      <form>
+      <form id="newEntry">
         <textarea
           id="entry"
           placeholder="tell me your dreams..."
           onInput={autoGrow}
+          onChange={(e) => setText(e.target.value)}
+          value={text}
         ></textarea>
-        <input type="submit" value="Submit" />
       </form>
+      <div className="btnDiv">
+        <button className="dreamButton" onClick={() => analysis(text)}>
+          <p>decipher</p>
+        </button>
+      </div>
+      <div className="flex">
+        {tag}
+        <div className="tags">{tags}</div>
+      </div>
+      <div>{analysedText}</div>
     </div>
   )
 }

@@ -9,7 +9,7 @@ const server = express()
 server.use(express.json())
 server.use(express.static(path.join(__dirname, './public')))
 server.use(cors('*'))
-server.use('/cards', cards)
+server.use('/api/v1/cards', cards)
 
 // server.use('/*', (req, res) => res.sendStatus(404))
 

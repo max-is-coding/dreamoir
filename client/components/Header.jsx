@@ -25,14 +25,14 @@ function Header() {
               <a className="header-link" href="/">
                 home
               </a>
-              <a className="header-link" href="/about">
-                about
+              <a className="header-link" href="/diary">
+                dreams
               </a>
               <a className="header-link" href="/study">
-                study
+                tarot
               </a>
               <a className="header-link" href="/practice">
-                practice
+                quiz
               </a>
               <div className="search-bar">
                 <form id="form">

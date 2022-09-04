@@ -6,6 +6,7 @@ import Header from './Header'
 import Footer from './Footer'
 import Study from './Study'
 import Practice from './Practice'
+import Writing from './Writing'
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
               <Route path="/" element={<Home />} />
               <Route path="/practice" element={<Practice />} />
               <Route path="/study" element={<Study />} />
+              <Route path="/diary" element={<Writing />} />
             </Routes>
           </div>
         </div>

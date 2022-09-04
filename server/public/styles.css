@@ -336,3 +336,54 @@ button, input[type="submit"], input[type="reset"] {
   height: 600px;
   width: auto;
 }
+
+.tags {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 30px;
+}
+
+.tagId p {
+  font-size: 22px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  font-weight: 400;
+  margin-right: 10px;
+}
+
+.tag {
+  background: #562349;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  padding: 8px;
+}
+
+.tag p {
+  font-size: 16px;
+  color: white;
+  font-weight: 400;
+}
+
+.dreamButton {
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  background-color: whitesmoke;
+}
+
+.dreamButton p {
+  font-size: 30px;
+  margin: 7px;
+}
+
+.btnDiv {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.flex {
+  display: flex;
+  align-items: baseline;
+}
