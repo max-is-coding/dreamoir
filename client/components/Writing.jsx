@@ -10,6 +10,7 @@ function Writing() {
   const [tag, setTagTag] = useState('')
   const [isVis, setVisibility] = useState('')
   const [tagVis, setTagVisibility] = useState('flex')
+  const [textGap, setGap] = useState('')
 
   const date = new Date()
   const year = date.getFullYear()
@@ -81,6 +82,7 @@ function Writing() {
   }
 
   function clickTag(word) {
+    setGap('deciphered')
     setVisibility('fadeOut')
     setTimeout(() => {
       getDreams()
@@ -126,7 +128,7 @@ function Writing() {
         {tag}
         <div className="tags">{tags}</div>
       </div>
-      <div className="deciphered">
+      <div className={textGap}>
         <div className={isVis}>{analysedText}</div>
       </div>
     </div>
