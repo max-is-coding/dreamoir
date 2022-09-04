@@ -389,6 +389,11 @@ button, input[type="submit"], input[type="reset"] {
   transform: translateY(3px);
 }
 
+.rBtn {
+  margin-top: 170px;
+  padding: 30px;
+}
+
 .btnDiv {
   display: flex;
   justify-content: center;
@@ -407,12 +412,16 @@ button, input[type="submit"], input[type="reset"] {
 .fadeOut{
   opacity:0;
   transition: width 0.5s 0.5s, height 0.5s 0.5s, opacity 0.5s;
-
 }
+
+.fadeOutBtn{
+  opacity:0;
+  transition: width 0.5s 0.5s, height 0.5s 0.5s, opacity 0.5s;
+}
+
 .fadeIn{
   opacity:1;
   transition: width 0.5s, height 0.5s, opacity 0.5s 0.5s;
-
 }
 
 .deciphered {
@@ -430,7 +439,7 @@ button, input[type="submit"], input[type="reset"] {
 }
 
 .reading {
-  margin-top: 30px;
+  margin-top: -300px;
 }
 
 .reading-img {
@@ -449,4 +458,8 @@ button, input[type="submit"], input[type="reset"] {
 
 .meanings {
   text-align: center;
+}
+
+.readDiv {
+  height: 510px;
 }
