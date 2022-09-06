@@ -392,11 +392,12 @@ button, input[type="submit"], input[type="reset"] {
 .rBtn {
   margin-top: 170px;
   padding: 30px;
+  width: 265px;
 }
 
 .btnDiv {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   margin-bottom: 30px;
 }
 
@@ -439,7 +440,7 @@ button, input[type="submit"], input[type="reset"] {
 }
 
 .reading {
-  margin-top: -300px;
+  margin-top: -30px;
 }
 
 .reading-img {
@@ -450,10 +451,23 @@ button, input[type="submit"], input[type="reset"] {
   margin-bottom: 10px;
 }
 
+.reading-C {
+  height: 170px;
+  width: auto;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
 .todaysCards {
   display: flex;
   flex-direction: column;
   width: 267px;
+}
+
+.celticCard {
+  width: 120px;
+  height: auto;
 }
 
 .meanings {
@@ -477,4 +491,51 @@ button, input[type="submit"], input[type="reset"] {
   flex-direction: column;
   justify-content: space-between;
   height: 300px;
+}
+
+
+.cCards {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+  margin-top: -60px;
+}
+
+.celt {
+  display: flex;
+  flex-direction: column ;
+}
+
+.celtic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.c2 img {
+  transform: rotate(-50deg);
+}
+
+.two {
+  margin-left: -150px;
+}
+
+.none {
+  display: none;
+}
+
+.c7, .c8, .c9, .c10 {
+  margin-top: -5px;
+  margin-bottom: -5px;
+}
+
+.meanings p {
+  font-size: 24px;
+  text-align: start;
+}
+
+.meanings {
+  margin-bottom: 10px;
 }
